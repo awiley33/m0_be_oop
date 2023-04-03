@@ -35,7 +35,15 @@ class Vampire
         @thirsty = true
     end
     
-    def drink 
+    def drink
+        @thirsty = false
+    end
+end
+vampire1 = Vampire.new("Vlad")
+p vampire1
+vampire1.drink
+p vampire1
+
 
 
 #  Write a Dragon class
@@ -44,6 +52,28 @@ class Vampire
 #  it should have a dynamic color attribute (string)
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
+
+class Dragon
+    def initialize(name, rider, color)
+        @name = name
+        @rider = rider
+        @color = color
+        @is_hungry = true
+    end
+
+    def eat(number_of_times)
+        if number_of_times >= 4
+            @is_hungry = false
+        end
+    end
+end
+dragon1 = Dragon.new("Fluffy", "Henry", "pink")
+p dragon1
+dragon1.drink(4)
+p dragon1
+
+############ I wanted the method to work in a way in that once the method was called 4 or more times, that is when the `is_hungry` variable changes to false. But I couldn't figure out how to do that so made the number into an argument.
+
 
 
 #  Write a Hobbit class
