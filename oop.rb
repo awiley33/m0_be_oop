@@ -69,7 +69,7 @@ class Dragon
 end
 dragon1 = Dragon.new("Fluffy", "Henry", "pink")
 p dragon1
-dragon1.drink(4)
+dragon1.eat(4)
 p dragon1
 
 ############ I wanted the method to work in a way in that once the method was called 4 or more times, that is when the `is_hungry` variable changes to false. But I couldn't figure out how to do that so made the number into an argument.
